@@ -96,7 +96,7 @@ service-worker: true
 
 
 # Friends
-Frends: [
+frends: [
     {
         title: "csdn",
         href: "https://www.csdn.net/"
