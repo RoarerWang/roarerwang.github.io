@@ -1,0 +1,191 @@
+---
+layout:     post                    # 使用的布局（不需要改）
+title:      Week01               # 标题 
+subtitle:   面向对象   控制语句  数组运用  eclipse使用         #副标题
+date:       2019-07-14              # 时间
+author:     王瀚霆                      # 作者
+header-img: img/bg3.jpg    #这篇文章标题背景图片
+catalog: true                       # 是否归档
+tags:                               #标签
+    - Javase
+---
+
+一 java历史
+二 规范
+三 方法
+四 面向对象
+五 流程控制符
+
+---
+
+# 一 java历史  
+	- 1995年5月 james gosling发布
+	- 2009年 被orcle收购
+	- 2019年 jdk12版本	
+
+- jdk   >   jre    >   jvm
+- 开发包	运行环境	  java虚拟机
+
+1.首先创建Hi.java文件  
+2.dos界面运行java  
+3.再 cd  到文件  
+4.再 javac Hi.java   编译源文件   
+5.再 java Hi         jvm生成class字节文件  
+
+---
+
+# 二 规范
+
+## 1.标识符  
+给包，类，变量，方法命名  
+由 字母 数字 _ $ 组成  
+首字母大写，且不能以数字开头  
+并且不能和关键字，jdk已知类，接口重名  
+
+## 2.访问控制修饰符——封装  
+public 公共的 整个工程都可以访问  
+protected 同一个包可以访问  
+private 私有的 同一个类可以使用  
+
+属性私有 方法公共  
+使用 get set方法获取设置属性  
+
+## 3.基本数据类型  
+布尔   
+boolean --false  
+1个字节 8位   
+
+字符型   
+char--\u0000-----------    
+2个字节                    |  
+				整形		长整形	 单精		双精  
+					int-0-long   float-0.0-double         
+				  4个字节 8个字节	 4个字节	    8个字节     
+				 -2^31~2^31-1  
+字节		短整型	 |	-2^63~2^63-1  
+byte---0--- short-------  
+1个字节		2个字节  
+-128~127	-2^15~-2^15-1  
+
+## 4.数组    
+一维数组  
+静态初始化  
+int arr[]={1,2,3};  
+
+动态初始化  
+int arr[]=new int[3];  
+arr[0]=1;  
+arr[2]=2;  
+arr[3]=3;  
+
+## 5.变量  
+- 成员变量 类中方法外 堆里 与对象共存亡 被访问控制符修饰  
+- 局部变量 类中方法里 栈里 与方法共存亡 只能被final修饰  
+- 静态变量 类中方法外 方法区里 与类共存亡  
+
+---
+
+# 三 方法
+## 1.扫描器 随机数  
+```
+java.util.java.Scanner;  
+Scanner in=new Scanner(System.in);  
+
+java.util.java.Randaom;  
+Random ran=new Random();   
+```
+
+## 2.Arrays  
+```
+Arrays.toString(arr);  
+将数组以字符串形式打印出来  
+arraycopy(int[] from,int start1,int[] to,int start2,int)  
+指定数组copy  
+```
+
+---
+
+# 四 面向对象  
+```
+public class Test{
+	private String name="王瀚霆";
+	private int age= 21;
+	public String getName(){
+		return name
+	}
+
+	public int setAge(int age){
+		age=age;
+		return age;
+	}
+
+	public Test(String name,int age){
+		this.name=name;
+		this.age=age;
+	}
+
+	public static void main (String[]args){
+	Test p1 = new Test();
+	Test p2 = new Test("王瀚霆",21);
+	Test p3 = new Test();
+	Test p4 = new Test("石倩",19);
+	p1.getName();
+	p1.setAge(18); 
+	}
+}
+
+class Test2{
+	private String name="王瀚霆";
+	private int age= 21;
+	public String getName(){
+		return name
+	}
+
+	public int setAge(int age){
+		age=age;
+		return age;
+	}
+
+	public Test(String name,int age){
+		this.name=name;
+		this.age=age;
+	}	
+}
+```
+
+- 1.类——属性--方法--构造方法——对象--调用方法属性  
+
+---
+
+# 五 流程控制符
+1.分支结构  
+```
+if(){
+	
+}else if{
+	
+}else{
+	
+}
+
+swich(sky);
+case 1:
+	break;
+case 2:
+    break;
+    default:
+    break;
+```
+
+2.循环结构   
+```
+for(int i=0, i<100,i++){
+	
+}
+
+int i =0;
+while(i < 100){
+	i++;
+}
+
+```
