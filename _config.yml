@@ -96,12 +96,11 @@ service-worker: true
 
 
 # Friends
-frends: [
+siteweb: [
     {
         title: "csdn",
         href: "https://www.csdn.net/"
-    }
-    {
+    },{
         title: "nowcoder",
         href: "https://www.nowcoder.com/"
     }
